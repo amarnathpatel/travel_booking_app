@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:travel_booking_app/utils/colors.dart';
 import 'package:travel_booking_app/utils/strings.dart';
 
-class HotelWidget extends StatelessWidget {
-  const HotelWidget({super.key});
+class HotelSearchScreen extends StatelessWidget {
+  static const String routeName = '/hotel';
+
+  const HotelSearchScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

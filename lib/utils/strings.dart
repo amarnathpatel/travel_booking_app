@@ -23,9 +23,9 @@ const kMyProfileTabLabelTxt = 'My Profile';
 
 //Bottom Navigaation tabs index
 const int kHotelTabIndex = 0;
-const int kFlightTabIndex= 2;
-const int kMyTripsTabIndex = 3;
-const int kMyProfileTabIndex = 4;
+const int kFlightTabIndex= 1;
+const int kMyTripsTabIndex = 2;
+const int kMyProfileTabIndex = 3;
 
 //Bottom Navigation font size - seleted text and unselected text
 const double kSelectedFontSize = 20.0;

@@ -1,0 +1,123 @@
+{
+    "meta": {
+        "count": 1,
+        "links": {
+            "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2023-06-20&adults=1&max=1&nonStop=true&currencyCode=INR"
+        }
+    },
+    "data": [
+        {
+            "type": "flight-offer",
+            "id": "1",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT2H10M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-20T13:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-20T15:10:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "1030",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "1",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "INR",
+                "total": "5999.00",
+                "base": "5172.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "5999.00"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "INR",
+                        "total": "5999.00",
+                        "base": "5172.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "dictionaries": {
+        "locations": {
+            "BOM": {
+                "cityCode": "BOM",
+                "countryCode": "IN"
+            },
+            "DEL": {
+                "cityCode": "DEL",
+                "countryCode": "IN"
+            }
+        },
+        "aircraft": {
+            "320": "AIRBUS A320"
+        },
+        "currencies": {
+            "INR": "INDIAN RUPEE"
+        },
+        "carriers": {
+            "UK": "VISTARA"
+        }
+    }
+}

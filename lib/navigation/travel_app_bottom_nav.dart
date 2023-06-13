@@ -7,6 +7,7 @@ import '../screens/my_trips_screen.dart';
 import '../utils/colors.dart';
 
 class TravelAppBottomNavLayout extends StatefulWidget {
+  static const String routeName = 'home';
   const TravelAppBottomNavLayout({super.key});
 
   @override
@@ -16,10 +17,10 @@ class TravelAppBottomNavLayout extends StatefulWidget {
 
 class _TravelAppBottomNavLayoutState extends State<TravelAppBottomNavLayout> {
   final _tabWidgets = <Widget>[
-    const HotelWidget(),
-    const FlightWidget(),
-    const MyTripsWidget(),
-    const MyProfileWidget()
+    const HotelSearchScreen(),
+    const FlightSearchScreen(),
+    const MyTripsScreen(),
+    const MyProfileScreen()
   ];
 
   int _currentIndex = kHotelTabIndex;
@@ -33,6 +34,7 @@ class _TravelAppBottomNavLayoutState extends State<TravelAppBottomNavLayout> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_screenTitle),
+        centerTitle: true,
       ),
       body: _tabWidgets[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

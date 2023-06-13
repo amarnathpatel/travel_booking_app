@@ -1,0 +1,3924 @@
+{
+    "meta": {
+        "count": 22,
+        "links": {
+            "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=PNQ&destinationLocationCode=LKO&departureDate=2023-06-13&adults=2&max=34"
+        }
+    },
+    "data": [
+        {
+            "type": "flight-offer",
+            "id": "1",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 5,
+            "itineraries": [
+                {
+                    "duration": "PT5H55M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T07:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T09:50:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "852",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H20M",
+                            "id": "48",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T12:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-13T13:25:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "431",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT1H5M",
+                            "id": "49",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "206.58",
+                "base": "174.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "206.58"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "103.29",
+                        "base": "87.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "48",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UEPP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "49",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UEPP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "103.29",
+                        "base": "87.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "48",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UEPP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "49",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UEPP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "2",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT9H20M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T05:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T07:40:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "974",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "14",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T13:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-13T14:50:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "830",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT1H10M",
+                            "id": "15",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "230.46",
+                "base": "184.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "230.46"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "115.23",
+                        "base": "92.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "14",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "115.23",
+                        "base": "92.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "14",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "3",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT18H30M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T20:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T22:30:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "992",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "29",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T13:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T14:50:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "830",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT1H10M",
+                            "id": "30",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "230.46",
+                "base": "184.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "230.46"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "115.23",
+                        "base": "92.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "29",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "30",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "115.23",
+                        "base": "92.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "29",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "30",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "4",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT25H40M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T13:10:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T15:25:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "972",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "41",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T13:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T14:50:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "830",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT1H10M",
+                            "id": "42",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "232.70",
+                "base": "186.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "232.70"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "116.35",
+                        "base": "93.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "41",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "42",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "116.35",
+                        "base": "93.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "41",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "42",
+                            "cabin": "PREMIUM_ECONOMY",
+                            "fareBasis": "UL1PPV",
+                            "brandedFare": "PREPV",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 20,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "5",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT21H55M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T16:55:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T19:10:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "998",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "52",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T13:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T14:50:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "830",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT1H10M",
+                            "id": "53",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "233.84",
+                "base": "200.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "233.84"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "116.92",
+                        "base": "100.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "52",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "LL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "L",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "53",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "LL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "L",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "116.92",
+                        "base": "100.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "52",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "LL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "L",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "53",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "LL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "L",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "6",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT12H5M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T07:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T09:50:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "852",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H20M",
+                            "id": "1",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T18:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-13T19:35:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "811",
+                            "aircraft": {
+                                "code": "319"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT1H5M",
+                            "id": "2",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "250.68",
+                "base": "216.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "250.68"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "7",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT13H20M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T18:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T21:05:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "850",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "16",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T07:05:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T08:10:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "411",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT1H5M",
+                            "id": "17",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "250.68",
+                "base": "216.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "250.68"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "16",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "17",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "16",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "17",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "8",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT24H40M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T07:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T09:50:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "852",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H20M",
+                            "id": "39",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T07:05:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T08:10:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "411",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT1H5M",
+                            "id": "40",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "250.68",
+                "base": "216.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "250.68"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "39",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "40",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "39",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "40",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "9",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT24H45M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T18:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T21:05:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "850",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "43",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T18:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T19:35:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "811",
+                            "aircraft": {
+                                "code": "319"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT1H5M",
+                            "id": "44",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "250.68",
+                "base": "216.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "250.68"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "43",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "44",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "43",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "44",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "10",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 5,
+            "itineraries": [
+                {
+                    "duration": "PT18H35M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T18:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T21:05:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "850",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "31",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T12:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T13:25:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "431",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT1H5M",
+                            "id": "32",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "250.68",
+                "base": "216.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "250.68"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "31",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "32",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "125.34",
+                        "base": "108.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "31",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "32",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "11",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT18H30M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T18:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T21:05:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "850",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "23",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T08:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T10:10:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "665",
+                            "aircraft": {
+                                "code": "321"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "24",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T11:15:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T13:20:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "625",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H5M",
+                            "id": "25",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "416.46",
+                "base": "370.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "416.46"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "208.23",
+                        "base": "185.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "23",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "24",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "25",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "208.23",
+                        "base": "185.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "23",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "24",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "25",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "12",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 6,
+            "itineraries": [
+                {
+                    "duration": "PT18H30M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T18:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T21:05:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "850",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "26",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T22:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T00:45:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "814",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "27",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T11:15:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T13:20:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "625",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H5M",
+                            "id": "28",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "416.46",
+                "base": "370.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "416.46"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "208.23",
+                        "base": "185.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "26",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "27",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "28",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "208.23",
+                        "base": "185.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "26",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "27",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "28",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "13",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-13",
+            "lastTicketingDateTime": "2023-06-13",
+            "numberOfBookableSeats": 6,
+            "itineraries": [
+                {
+                    "duration": "PT29H50M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T07:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T09:50:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "852",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H20M",
+                            "id": "45",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T22:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T00:45:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "814",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "46",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T11:15:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T13:20:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "625",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H5M",
+                            "id": "47",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "416.46",
+                "base": "370.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "416.46"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "AI"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "208.23",
+                        "base": "185.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "45",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "46",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "47",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "208.23",
+                        "base": "185.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "45",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "46",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "47",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "UIP",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "14",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT8H30M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T05:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T07:40:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "974",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "20",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T08:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-13T11:10:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "963",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H20M",
+                            "id": "21",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-13T12:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-13T14:00:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "567",
+                            "aircraft": {
+                                "code": "789"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H",
+                            "id": "22",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "420.58",
+                "base": "374.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "420.58"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "210.29",
+                        "base": "187.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "20",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "21",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "QL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "22",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "210.29",
+                        "base": "187.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "20",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "21",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "QL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "22",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "15",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT17H40M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T20:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T22:30:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "992",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "33",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T07:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T09:45:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "943",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "34",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T12:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T14:00:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "567",
+                            "aircraft": {
+                                "code": "789"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H",
+                            "id": "35",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "420.58",
+                "base": "374.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "420.58"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "210.29",
+                        "base": "187.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "33",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "34",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "QL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "35",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "210.29",
+                        "base": "187.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "33",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "34",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "QL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "35",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "16",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT21H5M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T16:55:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T19:10:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "998",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "3",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T07:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T09:45:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "943",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "4",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T12:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T14:00:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "567",
+                            "aircraft": {
+                                "code": "789"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H",
+                            "id": "5",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "433.18",
+                "base": "386.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "433.18"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "216.59",
+                        "base": "193.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "Q0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "QL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "216.59",
+                        "base": "193.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "Q0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "QL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "17",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT21H5M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T16:55:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T19:10:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "998",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "6",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T20:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-13T23:00:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "957",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "7",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T12:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T14:00:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "567",
+                            "aircraft": {
+                                "code": "789"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H",
+                            "id": "8",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "435.28",
+                "base": "388.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "435.28"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "217.64",
+                        "base": "194.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "Q0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "QL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "217.64",
+                        "base": "194.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "Q0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "QL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "18",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 6,
+            "itineraries": [
+                {
+                    "duration": "PT17H40M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T20:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T22:30:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "992",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "36",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T08:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T11:10:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "963",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H20M",
+                            "id": "37",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T12:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T14:00:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "567",
+                            "aircraft": {
+                                "code": "789"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H",
+                            "id": "38",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "439.48",
+                "base": "392.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "439.48"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "219.74",
+                        "base": "196.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "36",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "37",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "38",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "219.74",
+                        "base": "196.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "36",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "37",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "38",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "19",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 6,
+            "itineraries": [
+                {
+                    "duration": "PT21H5M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T16:55:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T19:10:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "998",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "9",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-14T08:50:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T11:10:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "963",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H20M",
+                            "id": "10",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "BOM",
+                                "terminal": "2",
+                                "at": "2023-06-14T12:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-14T14:00:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "567",
+                            "aircraft": {
+                                "code": "789"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H",
+                            "id": "11",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "452.08",
+                "base": "404.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "452.08"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "226.04",
+                        "base": "202.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "Q0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "11",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "226.04",
+                        "base": "202.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "Q0GRPRYS",
+                            "brandedFare": "ECOYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "11",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "VL1PYS",
+                            "brandedFare": "ECOYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "20",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT6H25M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T13:10:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T15:25:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "972",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H15M",
+                            "id": "18",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T18:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-13T19:35:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "811",
+                            "aircraft": {
+                                "code": "319"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT1H5M",
+                            "id": "19",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "592.96",
+                "base": "542.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "592.96"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "296.48",
+                        "base": "271.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "18",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "19",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "YIFOW",
+                            "class": "Y",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "296.48",
+                        "base": "271.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "18",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "19",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "YIFOW",
+                            "class": "Y",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "21",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT7H55M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T05:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T07:40:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "974",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT2H10M",
+                            "id": "50",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T12:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-13T13:25:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "431",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT1H5M",
+                            "id": "51",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "592.96",
+                "base": "542.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "592.96"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "296.48",
+                        "base": "271.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "50",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "51",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "YIFOW",
+                            "class": "Y",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "296.48",
+                        "base": "271.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "50",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "V0GRPRYS",
+                            "class": "V",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "51",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "YIFOW",
+                            "class": "Y",
+                            "includedCheckedBags": {
+                                "weight": 15,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "22",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "lastTicketingDate": "2023-06-12",
+            "lastTicketingDateTime": "2023-06-12",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT7H20M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "PNQ",
+                                "at": "2023-06-13T07:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T09:50:00"
+                            },
+                            "carrierCode": "AI",
+                            "number": "852",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "AI"
+                            },
+                            "duration": "PT2H20M",
+                            "id": "12",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DEL",
+                                "terminal": "3",
+                                "at": "2023-06-13T13:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "LKO",
+                                "terminal": "2",
+                                "at": "2023-06-13T14:50:00"
+                            },
+                            "carrierCode": "UK",
+                            "number": "830",
+                            "aircraft": {
+                                "code": "320"
+                            },
+                            "operating": {
+                                "carrierCode": "UK"
+                            },
+                            "duration": "PT1H10M",
+                            "id": "13",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "886.96",
+                "base": "822.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "886.96"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "UK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "443.48",
+                        "base": "411.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "12",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "YIFOW",
+                            "class": "Y",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "Q0RPRYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "443.48",
+                        "base": "411.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "12",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "YIFOW",
+                            "class": "Y",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "Q0RPRYS",
+                            "class": "Q",
+                            "includedCheckedBags": {
+                                "weight": 25,
+                                "weightUnit": "KG"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "dictionaries": {
+        "locations": {
+            "LKO": {
+                "cityCode": "LKO",
+                "countryCode": "IN"
+            },
+            "BOM": {
+                "cityCode": "BOM",
+                "countryCode": "IN"
+            },
+            "PNQ": {
+                "cityCode": "PNQ",
+                "countryCode": "IN"
+            },
+            "DEL": {
+                "cityCode": "DEL",
+                "countryCode": "IN"
+            }
+        },
+        "aircraft": {
+            "320": "AIRBUS A320",
+            "321": "AIRBUS A321",
+            "789": "BOEING 787-9",
+            "319": "AIRBUS A319",
+            "32N": "AIRBUS A320NEO"
+        },
+        "currencies": {
+            "EUR": "EURO"
+        },
+        "carriers": {
+            "UK": "VISTARA",
+            "AI": "AIR INDIA"
+        }
+    }
+}
