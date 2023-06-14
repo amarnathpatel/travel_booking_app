@@ -54,7 +54,7 @@ class FlightSearchScreen extends StatelessWidget {
                       decoration: const InputDecoration(
                         labelText: 'Departure',
                         hintText: 'Please input date of departure.',
-                                    ),
+                      ),
                     ),
                   ),
                 ),
@@ -73,7 +73,8 @@ class FlightSearchScreen extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () {
                           // TO DO Passing argumants
-                          Navigator.pushNamed(context, FlightResultsListScreen.routeName);
+                          Navigator.pushNamed(
+                              context, FlightResultsListScreen.routeName);
                         },
                         child: const Text('Search Flights')))),
           ],
