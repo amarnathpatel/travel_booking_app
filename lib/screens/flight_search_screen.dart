@@ -1,11 +1,13 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
+import 'package:travel_booking_app/services/flights_search_service.dart';
 
 import '../models/flight.dart';
 import 'flight_results_list_screen.dart';
 
 class FlightSearchScreen extends StatefulWidget {
   static const String routeName = '/flight';
-
   const FlightSearchScreen({super.key});
 
   @override
@@ -113,26 +115,9 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                     ),
                   ),
                 ),
-                // Expanded(
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(left: 16.0),
-                //     child: TextFormField(
-                //       decoration: const InputDecoration(labelText: "Arrival"),
-                //     ),
-                //   ),
-                // ),
               ],
             ),
-            // Expanded(
-            //   child: Center(
-            //     child: ElevatedButton(
-            //       onPressed: () {
-            //         _onSearchFlightBtnTap();
-            //       },
-            //       child: const Text('Search Flights'),
-            //     ),
-            //   ),
-            // ),
+            
             const SizedBox(height: 10.0),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               ElevatedButton(
@@ -155,21 +140,21 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
     );
   }
 
-  void _onSearchFlightBtnTap() {
+  void _onSearchFlightBtnTap() async {
     if (_formKey.currentState!.validate()) {
       String sourceAirportCode = sourceAirportInputController.text;
       String destinationAirportCode = destinationAirportInputController.text;
-      String noOfPassengers = passengersInputController.text;
+      int noOfPassengers = int.parse(passengersInputController.text);
       String departureDate = departureDateInputController.text;
       debugPrint('Input data: source : $sourceAirportCode');
       debugPrint('Input data: destination : $destinationAirportCode');
       debugPrint('Input data: No of passengers : $noOfPassengers');
       debugPrint('Input data: Departure Date : $departureDate');
 
+     List<Flight> flightlist = await FlightsSearchService().getFlightSerachResults(sourceAirportCode, destinationAirportCode, departureDate, noOfPassengers);
       // TO DO Passing argumants
       Navigator.pushNamed(context, FlightResultsListScreen.routeName,
-          arguments:
-              Flight(DateTime(2023), DateTime(2023), '466', 'Air Ashia'));
+          arguments:flightlist);
     }
   }
 
