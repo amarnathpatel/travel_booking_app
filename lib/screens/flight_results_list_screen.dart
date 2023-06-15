@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_booking_app/models/flight.dart';
+import 'package:travel_booking_app/widgets/flight_card.dart';
+
+import '../models/flight_details_model.dart';
 
 class FlightResultsListScreen extends StatefulWidget {
   static const String routeName = '/flightlist';
@@ -11,42 +13,10 @@ class FlightResultsListScreen extends StatefulWidget {
 }
 
 class _FlightResultsListScreenState extends State<FlightResultsListScreen> {
-  // final List<Flight> flightList = [
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 08, 30), DateTime(2023, 06, 17, 09, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 02, 30), DateTime(2023, 06, 17, 03, 30), 'AI',
-  //       'Indigo'),
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 08, 30), DateTime(2023, 06, 17, 09, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 02, 30), DateTime(2023, 06, 17, 03, 30), 'AI',
-  //       'Indigo'),
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 08, 30), DateTime(2023, 06, 17, 09, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 02, 30), DateTime(2023, 06, 17, 03, 30), 'AI',
-  //       'Indigo'),
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  //   Flight(DateTime(2023, 06, 17, 06, 30), DateTime(2023, 06, 17, 08, 30), 'AI',
-  //       'AIr India'),
-  // ];
-
-  @override
+ @override
   Widget build(BuildContext context) {
-    List<Flight> flightList = ModalRoute.of(context)!.settings.arguments as List<Flight>;
+    List<FlightDetailModel> flightList =
+        ModalRoute.of(context)!.settings.arguments as List<FlightDetailModel>;
 
     return Scaffold(
       appBar: AppBar(
@@ -62,34 +32,14 @@ class _FlightResultsListScreenState extends State<FlightResultsListScreen> {
         //height: 220,
         //width: double.maxFinite,
         //child: Scrollbar(
-          child: ListView.builder(
-            itemCount: flightList.length,
-            itemBuilder: (BuildContext context, int index) =>
-                buildFlightCard(context, index, flightList),
-          ),
-        ),
-      );
-    //);
-  }
-
-  Widget buildFlightCard(BuildContext context, int index, flightList) {
-    debugPrint('index of item :$index');
-    final Flight flight = flightList[index];
-    return Container(
-      height: 130,
-      child: Card(
-        elevation: 5.0,
-        child: Column(
-          children: <Widget>[
-            Text(flight.departureDateTime.toString()),
-            Text(flight.arrivalDateTime.toString()),
-            Text(flight.carrierCode),
-             Text(flight.carrierName),
-
-
-          ],
+        child: ListView.builder(
+          itemCount: flightList.length,
+          itemBuilder: (BuildContext context, int index) =>
+              //buildFlightCard(index, flightList),
+              FlightCard(flightList[index]),
         ),
       ),
     );
+    //);
   }
 }

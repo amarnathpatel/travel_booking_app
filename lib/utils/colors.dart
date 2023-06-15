@@ -2,6 +2,10 @@
 import 'package:flutter/material.dart';
 
 
+import 'package:flutter/cupertino.dart';
+
+
+
 // Bottom Navigation colors
 const kSelectedBottomNavItemColor =  Color.fromARGB(255, 57, 179, 228);
 const kUnselectedBottomNavItemColor = Color(0xFFFFFFFF);
@@ -35,3 +39,11 @@ const kSliderThumbColor = Color(0xFFEB1555);
 
 const kRoundedIconButtonColor = Color(0xFF0A0D22);
 const kIconBackgroundColor = Color(0xFF111429);
+
+
+Color kCardBgColor = Color(0xFF2D303A);
+Color kCardtextColor = Color(0xFFFFFFFF);
+Color Primary = Color(0xFFFFC78C);
+
+
+

@@ -1,9 +1,10 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
+import 'package:travel_booking_app/models/flight_details_model.dart';
 import 'package:travel_booking_app/services/flights_search_service.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-import '../models/flight.dart';
 import 'flight_results_list_screen.dart';
 
 class FlightSearchScreen extends StatefulWidget {
@@ -20,6 +21,8 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
       TextEditingController();
   TextEditingController passengersInputController = TextEditingController();
   TextEditingController departureDateInputController = TextEditingController();
+
+  bool _isBusy = false;
 
   final _formKey = GlobalKey<FormState>();
 
@@ -117,23 +120,41 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                 ),
               ],
             ),
-            
             const SizedBox(height: 10.0),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              ElevatedButton(
-                onPressed: () {
-                  _onSearchFlightBtnTap();
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () async {
+                    setState(() {
+                      _isBusy = true;
+                    });
+                    _onSearchFlightBtnTap();
+                  },
+                  child: const Text('Search Flights'),
+                ),
+                const SizedBox(width: 10.0),
+                ElevatedButton(
+                  onPressed: () {
+                    _onReset();
+                  },
+                  child: const Text('Reset'),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10.0),
+            Visibility(
+              visible: _isBusy,
+              child: SpinKitDancingSquare(
+                itemBuilder: (BuildContext context, int index) {
+                  return DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: index.isEven ? Colors.grey : Colors.blueGrey,
+                    ),
+                  );
                 },
-                child: const Text('Search Flights'),
               ),
-              const SizedBox(width: 10.0),
-              ElevatedButton(
-                onPressed: () {
-                  _onReset();
-                },
-                child: const Text('Reset'),
-              ),
-            ])
+            ),
           ],
         ),
       ),
@@ -150,11 +171,16 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
       debugPrint('Input data: destination : $destinationAirportCode');
       debugPrint('Input data: No of passengers : $noOfPassengers');
       debugPrint('Input data: Departure Date : $departureDate');
-
-     List<Flight> flightlist = await FlightsSearchService().getFlightSerachResults(sourceAirportCode, destinationAirportCode, departureDate, noOfPassengers);
+      List<FlightDetailModel> flightlist = await FlightsSearchService()
+          .getFlightSerachResults(sourceAirportCode, destinationAirportCode,
+              departureDate, noOfPassengers);
+      
+      setState(() {
+        _isBusy = false;
+      });
       // TO DO Passing argumants
       Navigator.pushNamed(context, FlightResultsListScreen.routeName,
-          arguments:flightlist);
+          arguments: flightlist);
     }
   }
 
