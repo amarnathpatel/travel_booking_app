@@ -104,7 +104,7 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                       controller: departureDateInputController,
                       keyboardType: TextInputType.datetime,
                       decoration: const InputDecoration(
-                        labelText: 'Departure Data',
+                        labelText: 'Departure Date',
                         hintText: 'Please input date of departure.',
                       ),
                       validator: (value) {

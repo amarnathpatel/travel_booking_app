@@ -1,0 +1,75 @@
+{
+    "data": [
+      {
+        "type": "hotel-offers",
+        "hotel": {
+          "type": "hotel",
+          "hotelId": "WIPNQ218",
+          "chainCode": "WI",
+          "dupeId": "700173623",
+          "name": "The Westin Pune Koregaon Park",
+          "cityCode": "PNQ",
+          "latitude": 18.53947,
+          "longitude": 73.90594
+        },
+        "available": true,
+        "offers": [
+          {
+            "id": "A4LLJA3GS4",
+            "checkInDate": "2023-11-22",
+            "checkOutDate": "2023-11-24",
+            "rateCode": "S9R",
+            "rateFamilyEstimated": {
+              "code": "SRS",
+              "type": "C"
+            },
+            "room": {
+              "type": "XMI",
+              "typeEstimated": {
+                "beds": 1,
+                "bedType": "QUEEN"
+              },
+              "description": {
+                "text": "Marriott Senior Discount, includes\n1 Queen(s), Mini fridge, Wireless internet,\nfor a fee, Wired internet, for a fee,",
+                "lang": "EN"
+              }
+            },
+            "guests": {
+              "adults": 3
+            },
+            "price": {
+              "currency": "INR",
+              "base": "30600.00",
+              "total": "39648.00",
+              "variations": {
+                "average": {
+                  "base": "15300.00"
+                },
+                "changes": [
+                  {
+                    "startDate": "2023-11-22",
+                    "endDate": "2023-11-24",
+                    "base": "15300.00"
+                  }
+                ]
+              }
+            },
+            "policies": {
+              "cancellations": [
+                {
+                  "description": {
+                    "text": "2023-11-21T23:59:00\nCancel Penalty Amount: 18054.00 "
+                  },
+                  "amount": "18054.00",
+                  "deadline": "2023-11-21T23:59:00+05:30"
+                }
+              ],
+              "paymentType": "guarantee"
+            },
+            "self": "https://test.api.amadeus.com/v3/shopping/hotel-offers/A4LLJA3GS4"
+          }
+        ],
+        "self": "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=IMPNQ918,RTPNQIBI,RTPNQNOV,YXPNQELI,HYPNQHYP,IQPNQGOL,IMPNQPOP,WIPNQ218&adults=3&checkInDate=2023-11-22&checkOutDate=2023-11-24&roomQuantity=1&paymentPolicy=NONE&bestRateOnly=true"
+      }
+    ]
+  }

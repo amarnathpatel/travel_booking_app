@@ -3,20 +3,13 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:intl/intl.dart';
 import 'package:travel_booking_app/models/flight_details_model.dart';
 import 'package:travel_booking_app/utils/api_constants.dart';
 
-import '../models/flight.dart';
-
 class FlightsSearchService {
-  late DateTime departureDateTime;
-  late DateTime arrivalDateTime;
-  late String carrierCode;
-  late String carrierName;
-  late int totatPrice;
-
-  Future<List<FlightDetailModel>> getFlightSerachResults(
+    Future<List<FlightDetailModel>> getFlightSerachResults(
       String originLocationCode,
       String destinationLocationCode,
       String departureDate,
@@ -31,22 +24,19 @@ class FlightsSearchService {
     var url = Uri.parse(
         '$kSearchFlightsUrl?originLocationCode=$originLocationCode&destinationLocationCode=$destinationLocationCode&departureDate=$departureDate&adults=$adultsCount');
     Map<String, String> headers = {
-      'Authorization': 'Bearer OBsyu7t2sX0Ao3xOsTIPlwsXJTOc'
+      'Authorization': 'Bearer rkgFO2jEilT8sx1BhmZbnYWJ8CqQC2xn'
     };
-    var response = await http.get(url, headers: headers);
+    Response response;
+    try {
+      response = await http.get(url, headers: headers);
+    } catch (e) {
+      debugPrint("Error $e occurred");
+      return flightSerachResult;
+    }
     debugPrint(response.statusCode.toString());
     if (response.statusCode == 200) {
       var data = response.body;
-      var jsonObject = jsonDecode(
-          data); // Parses the JSON string and returns the resulting JSON object
-      // var count = jsonObject['meta']['count'];
-      //debugPrint('Count : $count');
-
-      //debugPrint("${response.statusCode}");
-      //debugPrint(response.body);
-
-      //final String data = await rootBundle.loadString('assets/flight2.json');
-      //var jsonObject = jsonDecode(data); // Parses the JSON string and returns the resulting JSON object
+      var jsonObject = jsonDecode(data);
       var flightList = jsonObject['data'];
       List flightListArray = flightList as List;
       for (var flight in flightListArray) {
@@ -96,8 +86,8 @@ class FlightsSearchService {
                 'segment details- Carrier Code:$carrierCode  ,Flight Number: $flightNumber ,Aircraft Code : $aircraftCode ,Number Of stops : $noOfStops');
             debugPrint(
                 'segment details- Departure Time:$departureTime  ,Arrival Time: $arrivalTime');
-            flightSerachResult.add(FlightDetailModel(
-                path, time, formattedDeparturDate, carrierName, totalCost, flightNo));
+            flightSerachResult.add(FlightDetailModel(path, time,
+                formattedDeparturDate, carrierName, totalCost, flightNo));
           }
         }
       }
@@ -163,17 +153,8 @@ class FlightsSearchService {
           var carrierName =
               jsonObject['dictionaries']['carriers']['$carrierCode'];
           debugPrint('Carrier Name :::::: $carrierName');
-          var flightNumber = segment['number'];
-          var aircraftCode = segment['aircraft']['code'];
-          var noOfStops = segment['numberOfStops'];
-          debugPrint(
-              'segment details- Carrier Code:$carrierCode  ,Flight Number: $flightNumber ,Aircraft Code : $aircraftCode ,Number Of stops : $noOfStops');
-          debugPrint(
-              'segment details- Carrier Code:$carrierCode  ,Flight Number: $flightNumber ,Aircraft Code : $aircraftCode ,Number Of stops : $noOfStops');
-          debugPrint(
-              'segment details- Departure Time:$departureTime  ,Arrival Time: $arrivalTime');
-          flightSerachResult.add(FlightDetailModel(
-              path, time, formattedDeparturDate, carrierName, totalCost,flightNo));
+          flightSerachResult.add(FlightDetailModel(path, time,
+              formattedDeparturDate, carrierName, totalCost, flightNo));
         } //
       }
     }

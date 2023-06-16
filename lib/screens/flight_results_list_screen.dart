@@ -13,7 +13,7 @@ class FlightResultsListScreen extends StatefulWidget {
 }
 
 class _FlightResultsListScreenState extends State<FlightResultsListScreen> {
- @override
+  @override
   Widget build(BuildContext context) {
     List<FlightDetailModel> flightList =
         ModalRoute.of(context)!.settings.arguments as List<FlightDetailModel>;
@@ -28,11 +28,8 @@ class _FlightResultsListScreenState extends State<FlightResultsListScreen> {
         ),
       ),
       body: Scrollbar(
-        //padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-        //height: 220,
-        //width: double.maxFinite,
-        //child: Scrollbar(
         child: ListView.builder(
+          shrinkWrap: true,
           itemCount: flightList.length,
           itemBuilder: (BuildContext context, int index) =>
               //buildFlightCard(index, flightList),

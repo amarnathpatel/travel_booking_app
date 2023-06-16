@@ -43,7 +43,7 @@ const kIconBackgroundColor = Color(0xFF111429);
 
 Color kCardBgColor = Color(0xFF2D303A);
 Color kCardtextColor = Color(0xFFFFFFFF);
-Color Primary = Color(0xFFFFC78C);
+Color kFlightNumberTxtColor = Color(0xFFFFC78C);
 
 
 
