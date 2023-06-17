@@ -29,6 +29,7 @@ import 'package:travel_booking_app/screens/flight_results_list_screen.dart';
 import 'package:travel_booking_app/screens/flight_search_screen.dart';
 import 'package:travel_booking_app/screens/hotel_search_screen.dart';
 import 'navigation/travel_app_bottom_nav.dart';
+import 'screens/hotel_results_list_screen.dart';
 
 void main() => runApp(const BootstrapAppWidget());
 
@@ -48,6 +49,7 @@ class BootstrapAppWidget extends StatelessWidget {
         Routes.routeHomeScreen: ((context) => const TravelAppBottomNavLayout()),
         Routes.routeFlightScreen: ((context) => const FlightSearchScreen()),
         Routes.routesFlightList: ((context) => const FlightResultsListScreen()),
+        Routes.routehHotelSearchList: ((context) => const HotelResultsListScreen()),
         Routes.routehHotelSearch: ((context) => const HotelSearchScreen()),
       },
       initialRoute: Routes.routeHomeScreen,

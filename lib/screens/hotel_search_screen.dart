@@ -4,6 +4,8 @@ import 'package:intl/intl.dart';
 import 'package:travel_booking_app/models/hotel_details_model.dart';
 import 'package:travel_booking_app/services/hotels_search_service.dart';
 
+import 'hotel_results_list_screen.dart';
+
 class HotelSearchScreen extends StatefulWidget {
   static const String routeName = '/hotel';
 
@@ -241,7 +243,8 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
         _isBusy = false;
       });
 
-      
+        Navigator.pushNamed(context, HotelResultsListScreen.routeName,
+          arguments: hotels);
     
     }
   }

@@ -9,7 +9,7 @@ import 'package:travel_booking_app/models/flight_details_model.dart';
 import 'package:travel_booking_app/utils/api_constants.dart';
 
 class FlightsSearchService {
-    Future<List<FlightDetailModel>> getFlightSerachResults(
+  Future<List<FlightDetailModel>> getFlightSerachResults(
       String originLocationCode,
       String destinationLocationCode,
       String departureDate,

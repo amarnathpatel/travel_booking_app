@@ -61,9 +61,9 @@ class HotelSearchService {
         '$kSearchHotelsUrl?hotelIds=$hotelIds&adults=$adultsCount&checkInDate=$checkinDate&checkOutDate=$checkoutDate&roomQuantity=$roomQuantity');
     Map<String, String> headers = {'Authorization': 'Bearer $accessToken'};
     Response response;
-    try{
+    try {
       response = await http.get(searchHotels, headers: headers);
-    }catch (e) {
+    } catch (e) {
       debugPrint("Error $e occurred");
       return hotelSearchResult;
     }

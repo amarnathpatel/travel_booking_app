@@ -21,13 +21,17 @@ class HotelCardWidget extends StatelessWidget {
             Flexible(
               flex: 1,
               child: Image.asset(
-                'images/hotel1',
+                'assets/images/hotel3.jpg',
                 fit: BoxFit.cover,
               ),
             ),
             Flexible(
               flex: 2,
-              child: Text(hotel.hotelName),
+              child: Text(hotel.hotelName,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 15.0,
+                  )),
             )
           ],
         ));
