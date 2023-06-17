@@ -20,19 +20,74 @@ class HotelCardWidget extends StatelessWidget {
           children: <Widget>[
             Flexible(
               flex: 1,
-              child: Image.asset(
-                'assets/images/hotel3.jpg',
-                fit: BoxFit.cover,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  bottomLeft: Radius.circular(20.0),
+                ),
+                child: Image.asset(
+                  'assets/images/hotel3.jpg',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Flexible(
-              flex: 2,
-              child: Text(hotel.hotelName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 15.0,
-                  )),
-            )
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Column(
+                    children: [
+                      
+                      Text(
+                        hotel.hotelName,
+                        textAlign: TextAlign.left,
+                        maxLines: 2,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 15.0,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            'Location: ',
+                            style: kCardSmallTextStyle,
+                          ),
+                          Text(
+                            hotel.latitude,
+                            style: kCardSmallTextStyle,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            hotel.longitude,
+                            style: kCardSmallTextStyle,
+                          ),
+                        ],
+                      ),
+                       const SizedBox(
+                        height: 5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            'Total Fare: ',
+                            style: kCardSmallTextStyle,
+                          ),
+                          Text(
+                            hotel.fare,
+                            style: kCardSmallTextStyle,
+                          ),
+                         
+                        ],
+                      ),
+                    ],
+                  ),
+                ))
           ],
         ));
   }
