@@ -32,7 +32,6 @@ class _FlightResultsListScreenState extends State<FlightResultsListScreen> {
           shrinkWrap: true,
           itemCount: flightList.length,
           itemBuilder: (BuildContext context, int index) =>
-              //buildFlightCard(index, flightList),
               FlightCard(flightList[index]),
         ),
       ),

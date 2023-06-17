@@ -16,10 +16,14 @@ const kScreenTitleTextStyle = TextStyle(fontSize: 35.0, color: Color.fromARGB(25
 
 // Button - Bg color  and text style
 const kSearchBtnBgColor = Color.fromARGB(255, 90, 150, 13);
+const kEditProfileCircleBgColor = Color.fromARGB(255, 139, 231, 18);
+
 const kSearchBtnTextStyle = TextStyle(fontSize: 25.0, color: Color(0xFFFFFFFF));
 
 // Hint text style #F5F5F5
 const kEditInoputHintTxtStype = TextStyle(fontSize: 12.0, color: Color.fromARGB(176, 69, 96, 153));
+const kUserInputFormEditTextLabelStyle = TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold);
+                              
 
 const kLabelHeaderStyle = TextStyle(fontSize: 35.0, color: Color(0xFFFFFFFF));
 const kLabelTextStyle = TextStyle(fontSize: 22.0, color: Color(0xFFFFFFFF));

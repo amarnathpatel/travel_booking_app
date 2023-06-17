@@ -17,7 +17,8 @@ class FlightSearchScreen extends StatefulWidget {
 class _FlightSearchScreenState extends State<FlightSearchScreen> {
   //Input controllers handle
   TextEditingController sourceAirportInputController = TextEditingController();
-  TextEditingController destinationAirportInputController = TextEditingController();
+  TextEditingController destinationAirportInputController =
+      TextEditingController();
   TextEditingController passengersInputController = TextEditingController();
   TextEditingController departureDateInputController = TextEditingController();
 
@@ -135,7 +136,9 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: kSearchBtnBgColor, // button Background color
+                      backgroundColor: kSearchBtnBgColor, // Button Background color
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                     ),
                     onPressed: () async {
                       _onSearchFlightBtnTap();
@@ -144,8 +147,10 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                   ),
                   const SizedBox(width: 10.0),
                   ElevatedButton(
-                     style: ElevatedButton.styleFrom(
-                      backgroundColor: kSearchBtnBgColor, // buuton Background color
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: kSearchBtnBgColor, // Button Background color
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                     ),
                     onPressed: () {
                       _onReset();
@@ -177,7 +182,7 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
   void _onSearchFlightBtnTap() async {
     if (_formKey.currentState!.validate()) {
       setState(() {
-          _isBusy = true;
+        _isBusy = true;
       });
       String sourceAirportCode = sourceAirportInputController.text;
       String destinationAirportCode = destinationAirportInputController.text;

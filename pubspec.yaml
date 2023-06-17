@@ -12,6 +12,7 @@ dependencies:
   http: 
   flutter_spinkit: ^5.2.0
   intl: ^0.17.0
+  cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:

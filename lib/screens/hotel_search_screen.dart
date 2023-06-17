@@ -198,15 +198,21 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                       _onSearchHotelsBtnTap();
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: kSearchBtnBgColor, // buuton Background color
-                    ),
+                      backgroundColor: kSearchBtnBgColor, // Button Background color
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+                      shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                ),
                     child: const Text('Search Hotels'),
                   ),
                   const SizedBox(width: 10.0),
                   ElevatedButton(
-                     style: ElevatedButton.styleFrom(
-                      backgroundColor: kSearchBtnBgColor, // buuton Background color
-                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: kSearchBtnBgColor, // Button Background color
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+                      shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                ),
                     onPressed: () {
                       _onReset();
                     },
