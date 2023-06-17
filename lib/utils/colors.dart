@@ -15,15 +15,17 @@ const kBottomNavBgColor =  Color(0xFF1D1E33);
 const kScreenTitleTextStyle = TextStyle(fontSize: 35.0, color: Color.fromARGB(255, 238, 9, 9));
 
 // Button - Bg color  and text style
-const kSearchBtnBgColor = Color.fromARGB(255, 255, 109, 56);
+const kSearchBtnBgColor = Color.fromARGB(255, 90, 150, 13);
 const kSearchBtnTextStyle = TextStyle(fontSize: 25.0, color: Color(0xFFFFFFFF));
+
+// Hint text style #F5F5F5
+const kEditInoputHintTxtStype = TextStyle(fontSize: 12.0, color: Color.fromARGB(176, 69, 96, 153));
 
 const kLabelHeaderStyle = TextStyle(fontSize: 35.0, color: Color(0xFFFFFFFF));
 const kLabelTextStyle = TextStyle(fontSize: 22.0, color: Color(0xFFFFFFFF));
 const kLabelSecondaryTextSTyle =
 TextStyle(fontSize: 22.0, color: Color(0xFF81838E));
-const kLabelNumberTextStyle =
-TextStyle(fontSize: 50.0, color: Color(0xFFFFFFFF));
+const kLabelNumberTextStyle = TextStyle(fontSize: 50.0, color: Color(0xFFFFFFFF));
 const kLabelResultTextStyle =
 TextStyle(fontSize: 30.0, color: Color(0xFF48BD87));
 

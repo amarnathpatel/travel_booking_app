@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:travel_booking_app/models/hotel_details_model.dart';
 import 'package:travel_booking_app/services/hotels_search_service.dart';
 
+import '../utils/colors.dart';
 import 'hotel_results_list_screen.dart';
 
 class HotelSearchScreen extends StatefulWidget {
@@ -39,7 +40,8 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
     if (picked != null && picked != selectedDate) {
       setState(() {
         selectedDate = picked;
-        controller.value = TextEditingValue(text: requiredDateFormat.format(picked));
+        controller.value =
+            TextEditingValue(text: requiredDateFormat.format(picked));
       });
     }
   }
@@ -65,9 +67,10 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                       return null;
                     }
                   },
-                  onTap: () {},
                   decoration: const InputDecoration(
-                    icon: Icon(Icons.location_city, color: Colors.blueGrey),
+                    hintText: 'Provide City Code. e.g. PNQ, BOM',
+                    hintStyle: kEditInoputHintTxtStype,
+                    icon: Icon(Icons.location_city, color: Colors.blueGrey,),
                     labelText: "City to stay",
                   ),
                 ),
@@ -96,7 +99,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                           },
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return 'Check-in date field can\'t be blank';
+                              return 'Select date';
                             } else {
                               return null;
                             }
@@ -124,7 +127,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                           },
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return 'Check-out date field can\'t be blank';
+                              return 'Select date';
                             } else {
                               return null;
                             }
@@ -154,7 +157,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                           ),
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return 'Adults field can\'t be blank';
+                              return 'Mandatory input..';
                             } else {
                               return null;
                             }
@@ -162,9 +165,14 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                         ),
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(right: 16.0),
-                      child: Icon(Icons.room, color: Colors.blueGrey),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 16.0),
+                      //child: Icon(Icons.room, color: Colors.blueGrey),
+                      child: Image.asset(
+                        'assets/images/rooms.png',
+                        height: 24,
+                        color: Colors.blueGrey,
+                      ),
                     ),
                     Expanded(
                       child: Padding(
@@ -187,15 +195,18 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                 children: [
                   ElevatedButton(
                     onPressed: () async {
-                      setState(() {
-                        _isBusy = true;
-                      });
                       _onSearchHotelsBtnTap();
                     },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: kSearchBtnBgColor, // buuton Background color
+                    ),
                     child: const Text('Search Hotels'),
                   ),
                   const SizedBox(width: 10.0),
                   ElevatedButton(
+                     style: ElevatedButton.styleFrom(
+                      backgroundColor: kSearchBtnBgColor, // buuton Background color
+                    ),
                     onPressed: () {
                       _onReset();
                     },
@@ -232,6 +243,9 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
 
   void _onSearchHotelsBtnTap() async {
     if (_formKey.currentState!.validate()) {
+      setState(() {
+          _isBusy = true;
+      });
       String cityCode = cityInputController.text;
       String checkinDate = checkinDateInputController.text;
       String checkoutDate = checkoutDateInputController.text;
