@@ -19,16 +19,18 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
   TextEditingController cityInputController = TextEditingController();
   TextEditingController checkinDateInputController = TextEditingController();
   TextEditingController checkoutDateInputController = TextEditingController();
-  TextEditingController noofadultsInputInputController = TextEditingController();
+  TextEditingController noofadultsInputInputController =
+      TextEditingController();
   TextEditingController noofRoomsInputInputController = TextEditingController();
 
   bool _isBusy = false;
   final _formKey = GlobalKey<FormState>();
   DateTime selectedDate = DateTime.now();
 
-  Future<void> _pickDate(BuildContext context,  TextEditingController controller) async {
+  Future<void> _pickDate(
+      BuildContext context, TextEditingController controller) async {
     var requiredDateFormat = DateFormat('yyyy-MM-dd');
-    
+
     final DateTime? picked = await showDatePicker(
         context: context,
         initialDate: selectedDate,
@@ -37,7 +39,8 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
     if (picked != null && picked != selectedDate) {
       setState(() {
         selectedDate = picked;
-        controller.value = TextEditingValue(text: requiredDateFormat.format(picked));
+        controller.value =
+            TextEditingValue(text: requiredDateFormat.format(picked));
       });
     }
   }
@@ -62,8 +65,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                     return null;
                   }
                 },
-                onTap: () {
-                },
+                onTap: () {},
                 decoration: const InputDecoration(
                   icon: Icon(Icons.location_city, color: Colors.blueGrey),
                   labelText: "City to stay",
@@ -114,8 +116,8 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                           labelText: 'Check-out date',
                         ),
                         onTap: () {
-                        _pickDate(context, checkoutDateInputController);
-                         },
+                          _pickDate(context, checkoutDateInputController);
+                        },
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Check-out date field can\'t be blank';
@@ -129,7 +131,6 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                 ],
               ),
             ),
-           
             Padding(
               padding: const EdgeInsets.fromLTRB(0.0, 0.0, 64.0, 8.0),
               child: Row(
@@ -147,7 +148,6 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                         decoration: const InputDecoration(
                           labelText: 'No of adults',
                         ),
-                        
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Adults field can\'t be blank';
@@ -171,8 +171,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                         decoration: const InputDecoration(
                           labelText: 'No of rooms',
                         ),
-                        
-                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -218,34 +217,64 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
       ),
     );
   }
+
   _onReset() {
     cityInputController.clear();
     checkinDateInputController.clear();
     checkoutDateInputController.clear();
     noofadultsInputInputController.clear();
   }
-  
-  void _onSearchHotelsBtnTap() async {
-     if (_formKey.currentState!.validate()) {
-       String cityCode = cityInputController.text;
-       String checkinDate  = checkinDateInputController.text;
-       String checkoutDate = checkoutDateInputController.text;
-       int adults = int.parse(noofadultsInputInputController.text);
-       int rooms = int.parse(noofadultsInputInputController.text);
-       debugPrint('City Code: $cityCode , checkinDate:$checkinDate, checkoutDate:$checkoutDate, adults: $adults, Rooms: $rooms');
-       List <String>hotelIds = await HotelSearchService().getHotelIds(cityCode);
-       debugPrint('Hotel Ids count - ${hotelIds.length}');
-       debugPrint('Hotel Ids  - $hotelIds');
 
-       List<HotelDetailsModel> hotels = await HotelSearchService().searchHotels(hotelIds, checkinDate, checkoutDate, adults, rooms);
-       debugPrint('Hotel search results - ${hotels.length}');
+  void _onSearchHotelsBtnTap() async {
+    if (_formKey.currentState!.validate()) {
+      String cityCode = cityInputController.text;
+      String checkinDate = checkinDateInputController.text;
+      String checkoutDate = checkoutDateInputController.text;
+      int adults = int.parse(noofadultsInputInputController.text);
+      int rooms = int.parse(noofadultsInputInputController.text);
+      debugPrint(
+          'City Code: $cityCode , checkinDate:$checkinDate, checkoutDate:$checkoutDate, adults: $adults, Rooms: $rooms');
+      List<String> hotelIds = [];
+      try {
+        hotelIds = await HotelSearchService().getHotelIds(cityCode);
+      } catch (e) {
+        debugPrint('Exception occured(get HotelIDs for City) -  message : $e');
+        setState(() {
+          _isBusy = false;
+        });
+        showServerError(e);
+        return;
+      }
+      debugPrint('Hotel Ids count - ${hotelIds.length}');
+      debugPrint('Hotel Ids  - $hotelIds');
+      List<HotelDetailsModel> hotels = [];
+      try {
+        hotels = await HotelSearchService().searchHotels(hotelIds, checkinDate, checkoutDate, adults, rooms);
+      } catch (e) {
+        debugPrint('Exception occured from server(Search Hotels)-  message : $e');
+        setState(() {
+          _isBusy = false;
+        });
+        showServerError(e);
+        return;
+      }
+      debugPrint('Hotel search results - ${hotels.length}');
       setState(() {
         _isBusy = false;
       });
-
-        Navigator.pushNamed(context, HotelResultsListScreen.routeName,
-          arguments: hotels);
-    
+      if(int.parse('${hotels.length}') >= 1){
+        Navigator.pushNamed(context, HotelResultsListScreen.routeName,arguments: hotels);
+      } else{
+        showServerError(Exception('No data found, please search with some other inputs.'));
+      }
     }
+  }
+  // Show message if there is some issue in fetching data from server
+  void showServerError(Object errorMessage) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(errorMessage.toString().substring(10)),
+      ),
+    );
   }
 }

@@ -23,9 +23,9 @@ class HotelSearchService {
     Map<String, String> headers = {'Authorization': 'Bearer $accessToken'};
     try {
       response = await http.get(serchByCityUrl, headers: headers);
-    } catch (e) {
+    } on Exception catch (e) {
       debugPrint("Error $e occurred");
-      return hotelIdList;
+      rethrow;
     }
     debugPrint(response.statusCode.toString());
     if (response.statusCode == 200) {
@@ -37,9 +37,11 @@ class HotelSearchService {
         var hotelId = hotel['hotelId'];
         hotelIdList.add(hotelId);
         debugPrint('+++++++++++++++For hotel Id : $hotelId');
-      } //
+      } 
     } else {
-      debugPrint('Issue in getting data from Server');
+      List errors = jsonDecode(response.body)['errors'] as List ;
+      debugPrint(errors[0]['title']);
+      throw Exception(errors[0]['title']);
     }
     return hotelIdList;
   }
@@ -53,9 +55,15 @@ class HotelSearchService {
     int roomQuantity,
   ) async {
     String? token; //'liClA30YNOEGWOLJLsQvaKzNE5Op';
-    String? accessToken = token == null
+    String? accessToken;
+    try{
+    accessToken = token == null
         ? await AccessToken().generateAccessToken()
         : token.toString();
+    } on Exception catch (e) {
+      debugPrint("Error $e occurred in getting access token");
+      throw Exception('Server error occured, please try later');
+    }
 
     var searchHotels = Uri.parse(
         '$kSearchHotelsUrl?hotelIds=$hotelIds&adults=$adultsCount&checkInDate=$checkinDate&checkOutDate=$checkoutDate&roomQuantity=$roomQuantity');
@@ -63,9 +71,9 @@ class HotelSearchService {
     Response response;
     try {
       response = await http.get(searchHotels, headers: headers);
-    } catch (e) {
+    } on Exception catch (e) {
       debugPrint("Error $e occurred");
-      return hotelSearchResult;
+      rethrow;
     }
     debugPrint(response.statusCode.toString());
     debugPrint(response.body);
@@ -97,7 +105,10 @@ class HotelSearchService {
             offer: roomDesc));
       } //
     } else {
-      debugPrint('Error occured in gettting data from server');
+      List errors = jsonDecode(response.body)['errors'] as List;
+       debugPrint('Search Hotels API error response.....');
+      debugPrint(errors[0]['title']);
+      throw Exception(errors[0]['title']);
     }
     return hotelSearchResult;
   }
