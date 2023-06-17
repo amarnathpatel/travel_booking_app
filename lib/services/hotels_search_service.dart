@@ -12,10 +12,16 @@ class HotelSearchService {
   late List<HotelDetailsModel> hotelSearchResult = [];
   // To fetch Hotel Ids by City code
   Future<List<String>> getHotelIds(String cityCode) async {
-    String? token; //'liClA30YNOEGWOLJLsQvaKzNE5Op';
-    String? accessToken = token == null
-        ? await AccessToken().generateAccessToken()
-        : token.toString();
+    String? token; 
+    String? accessToken;
+    try {
+      accessToken = token == null
+          ? await AccessToken().generateAccessToken()
+          : token.toString();
+    } on Exception catch (e) {
+      debugPrint("Error $e occurred in getting access token");
+      throw Exception('Server error occured, please try later');
+    }
     Response response;
     var hotelIdList = <String>[];
     var serchByCityUrl = Uri.parse(
@@ -37,9 +43,9 @@ class HotelSearchService {
         var hotelId = hotel['hotelId'];
         hotelIdList.add(hotelId);
         debugPrint('+++++++++++++++For hotel Id : $hotelId');
-      } 
+      }
     } else {
-      List errors = jsonDecode(response.body)['errors'] as List ;
+      List errors = jsonDecode(response.body)['errors'] as List;
       debugPrint(errors[0]['title']);
       throw Exception(errors[0]['title']);
     }
@@ -56,10 +62,10 @@ class HotelSearchService {
   ) async {
     String? token; //'liClA30YNOEGWOLJLsQvaKzNE5Op';
     String? accessToken;
-    try{
-    accessToken = token == null
-        ? await AccessToken().generateAccessToken()
-        : token.toString();
+    try {
+      accessToken = token == null
+          ? await AccessToken().generateAccessToken()
+          : token.toString();
     } on Exception catch (e) {
       debugPrint("Error $e occurred in getting access token");
       throw Exception('Server error occured, please try later');
@@ -106,7 +112,7 @@ class HotelSearchService {
       } //
     } else {
       List errors = jsonDecode(response.body)['errors'] as List;
-       debugPrint('Search Hotels API error response.....');
+      debugPrint('Search Hotels API error response.....');
       debugPrint(errors[0]['title']);
       throw Exception(errors[0]['title']);
     }

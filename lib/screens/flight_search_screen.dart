@@ -1,10 +1,8 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:travel_booking_app/models/flight_details_model.dart';
 import 'package:travel_booking_app/services/flights_search_service.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
 import 'flight_results_list_screen.dart';
 
 class FlightSearchScreen extends StatefulWidget {
@@ -16,14 +14,14 @@ class FlightSearchScreen extends StatefulWidget {
 }
 
 class _FlightSearchScreenState extends State<FlightSearchScreen> {
+  //Input controllers handle
   TextEditingController sourceAirportInputController = TextEditingController();
-  TextEditingController destinationAirportInputController =
-      TextEditingController();
+  TextEditingController destinationAirportInputController = TextEditingController();
   TextEditingController passengersInputController = TextEditingController();
   TextEditingController departureDateInputController = TextEditingController();
 
   bool _isBusy = false;
-
+  DateTime selectedDate = DateTime.now();
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -32,6 +30,7 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
       key: _formKey,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Padding(
@@ -48,8 +47,8 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                   }
                 },
                 decoration: const InputDecoration(
-                  icon: Icon(Icons.flight_takeoff, color: Colors.red),
-                  labelText: "Departure Airport Code",
+                  icon: Icon(Icons.flight_takeoff, color: Colors.blueGrey),
+                  labelText: "Departure City",
                 ),
               ),
             ),
@@ -67,8 +66,8 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                   }
                 },
                 decoration: const InputDecoration(
-                  icon: Icon(Icons.flight_land, color: Colors.red),
-                  labelText: "Destination Airport Code",
+                  icon: Icon(Icons.flight_land, color: Colors.blueGrey),
+                  labelText: "Destination City",
                 ),
               ),
             ),
@@ -86,7 +85,7 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                   }
                 },
                 decoration: const InputDecoration(
-                  icon: Icon(Icons.person, color: Colors.red),
+                  icon: Icon(Icons.person, color: Colors.blueGrey),
                   labelText: "Number of Passengers",
                 ),
               ),
@@ -95,20 +94,24 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
               children: <Widget>[
                 const Padding(
                   padding: EdgeInsets.only(right: 16.0),
-                  child: Icon(Icons.date_range, color: Colors.red),
+                  child: Icon(Icons.date_range, color: Colors.blueGrey),
                 ),
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(right: 16.0),
                     child: TextFormField(
+                      showCursor: true,
+                      readOnly: true,
                       controller: departureDateInputController,
-                      keyboardType: TextInputType.datetime,
                       decoration: const InputDecoration(
+                      
                         labelText: 'Departure Date',
-                        hintText: 'Please input date of departure.',
+                        hintText: 'Please select date of departure.',
                       ),
+                      onTap: (){
+                         _pickDate(context, departureDateInputController);
+                      },
                       validator: (value) {
-                        debugPrint('Departure date  input Validator : $value');
                         if (value!.isEmpty) {
                           return 'Departure date field can\'t be blank';
                         } else {
@@ -145,7 +148,7 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
             const SizedBox(height: 10.0),
             Visibility(
               visible: _isBusy,
-              child: SpinKitDancingSquare(
+              child: SpinKitFadingCircle(
                 itemBuilder: (BuildContext context, int index) {
                   return DecoratedBox(
                     decoration: BoxDecoration(
@@ -156,6 +159,7 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
               ),
             ),
           ],
+        ),
         ),
       ),
     );
@@ -171,16 +175,31 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
       debugPrint('Input data: destination : $destinationAirportCode');
       debugPrint('Input data: No of passengers : $noOfPassengers');
       debugPrint('Input data: Departure Date : $departureDate');
-      List<FlightDetailModel> flightlist = await FlightsSearchService()
-          .getFlightSerachResults(sourceAirportCode, destinationAirportCode,
-              departureDate, noOfPassengers);
-      
+      List<FlightDetailModel> flightlist = [];
+      try {
+        flightlist = await FlightsSearchService().getFlightSerachResults(
+            sourceAirportCode,
+            destinationAirportCode,
+            departureDate,
+            noOfPassengers);
+      } catch (e) {
+        debugPrint(
+            'Exception occured in getti ng flight results -  message : $e');
+        setState(() {
+          _isBusy = false;
+        });
+        showServerError(e);
+        return;
+      }
       setState(() {
         _isBusy = false;
       });
-      // TO DO Passing argumants
+      if(int.parse('${flightlist.length}') >= 1){
       Navigator.pushNamed(context, FlightResultsListScreen.routeName,
           arguments: flightlist);
+      } else{
+        showServerError(Exception('No data found, please search with some other inputs.'));
+      }
     }
   }
 
@@ -189,5 +208,34 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
     destinationAirportInputController.clear();
     passengersInputController.clear();
     departureDateInputController.clear();
+  }
+
+  // Show message if there is some issue in fetching data from server
+  void showServerError(Object errorMessage) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+          content: Text(
+            errorMessage.toString().substring(10),
+          ),
+          backgroundColor: Colors.brown),
+    );
+  }
+
+  Future<void> _pickDate(
+      BuildContext context, TextEditingController controller) async {
+    var requiredDateFormat = DateFormat('yyyy-MM-dd');
+
+    final DateTime? picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: DateTime(1901, 1),
+        lastDate: DateTime(2100));
+    if (picked != null && picked != selectedDate) {
+      setState(() {
+        selectedDate = picked;
+        controller.value =
+            TextEditingValue(text: requiredDateFormat.format(picked));
+      });
+    }
   }
 }

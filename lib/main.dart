@@ -41,7 +41,7 @@ class BootstrapAppWidget extends StatelessWidget {
     return MaterialApp(
       title: 'Travel Booking Application',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.blueGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
