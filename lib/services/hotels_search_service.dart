@@ -71,7 +71,8 @@ class HotelSearchService {
     if (response.statusCode == 200) {
       var data = response.body;
       List hotelArray = jsonDecode(data)['data'] as List;
-      for (var hotel in hotelArray) {
+      for (int index = 0; index < hotelArray.length; index++) {
+        var hotel = hotelArray[index];
         var hotelName = hotel['hotel']['name'];
         var lat = hotel['hotel']['latitude'].toString();
         var long = hotel['hotel']['latitude'].toString();
@@ -92,7 +93,8 @@ class HotelSearchService {
             hotelName: hotelName,
             latitude: lat,
             longitude: long,
-            offer: roomDesc));
+            offer: roomDesc,
+            hotelPhotoUrl: 'assets/images/hotel/hotel${index+1}.jpg'));
       } //
     } else {
       List errors = jsonDecode(response.body)['errors'] as List;

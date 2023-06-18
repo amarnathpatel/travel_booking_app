@@ -166,7 +166,7 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
                   itemBuilder: (BuildContext context, int index) {
                     return DecoratedBox(
                       decoration: BoxDecoration(
-                        color: index.isEven ? Colors.grey : Colors.blueGrey,
+                        color: index.isEven ? Colors.blueGrey : Colors.green,
                       ),
                     );
                   },

@@ -2,7 +2,7 @@ class HotelDetailsModel {
   String hotelName;
   String latitude;
   String longitude;
-  String? hotelPhotoUrl;
+  String  hotelPhotoUrl;
   String fare;
   String offer;
 
@@ -10,7 +10,7 @@ class HotelDetailsModel {
     required this.hotelName,
     required this.latitude,
     required this.longitude,
-    this.hotelPhotoUrl,
+    required this.hotelPhotoUrl,
     required this.offer,
     required this.fare,
   });

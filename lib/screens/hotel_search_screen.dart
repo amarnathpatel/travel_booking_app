@@ -59,7 +59,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                 padding: const EdgeInsets.fromLTRB(0.0, 0.0, 64.0, 8.0),
                 child: TextFormField(
                   controller: cityInputController,
-                  keyboardType: TextInputType.datetime,
+                  keyboardType: TextInputType.text,
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'City can\'t be blank';
@@ -227,7 +227,7 @@ class _HotelSearchScreenState extends State<HotelSearchScreen> {
                   itemBuilder: (BuildContext context, int index) {
                     return DecoratedBox(
                       decoration: BoxDecoration(
-                        color: index.isEven ? Colors.grey : Colors.blueGrey,
+                        color: index.isEven ? Colors.blueGrey : Colors.green,
                       ),
                     );
                   },

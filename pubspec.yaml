@@ -30,4 +30,18 @@ flutter:
       - assets/flight1.json
       - assets/flight2.json
       - assets/images/
-      - assets/images/hotel1.jpg
+      - assets/images/hotel/hotel1.jpg      
+      - assets/images/hotel/hotel2.jpg
+      - assets/images/hotel/hotel3.jpg
+      - assets/images/hotel/hotel4.jpg
+      - assets/images/hotel/hotel5.jpg
+      - assets/images/hotel/hotel6.jpg
+      - assets/images/hotel/hotel8.jpg
+      - assets/images/hotel/hotel8.jpg
+      - assets/images/hotel/hotel9.jpg     
+      - assets/images/hotel/hotel10.jpg
+      - assets/images/hotel/hotel11.jpg
+      - assets/images/hotel/hotel12.jpg
+
+
+

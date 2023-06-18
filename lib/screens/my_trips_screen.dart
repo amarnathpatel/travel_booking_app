@@ -25,16 +25,16 @@ class _MyTripsScreeenState extends State<MyTripsScreen> {
           children: const [
             CustomTextWidget(title: 'Upcoming trips'),
             TripItemWidget(
-              imagePath: 'assets/images/switzerland.jpg',
-              place: 'Ningaloo, Switzerland',
-              title: 'Dive with Whale sharks',
+              imagePath: 'assets/images/sion.jpg',
+              place: 'Sion, Switzerland',
+              title: 'Beautiful city located in the Rhone Valley.',
               date: 'Aug 30, 2023',
             ),
             CustomTextWidget(title: 'Completed trips'),
             TripItemWidget(
               imagePath: 'assets/images/goa.jpg',
               place: 'Goa, India',
-              title: 'Beutiful Beach Trip',
+              title: 'Beutiful beach trip, the Miami of India',
               date: 'Sept 30, 2023',
             ),
           ],

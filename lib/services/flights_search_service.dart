@@ -25,7 +25,7 @@ class FlightsSearchService {
     String? savedAccessToken = prefs.getString('access_token');
     var flightSerachResult = <FlightDetailModel>[];
     var url = Uri.parse(
-        '$kSearchFlightsUrl?originLocationCode=$originLocationCode&destinationLocationCode=$destinationLocationCode&departureDate=$departureDate&adults=$adultsCount');
+        '$kSearchFlightsUrl?originLocationCode=$originLocationCode&destinationLocationCode=$destinationLocationCode&departureDate=$departureDate&adults=$adultsCount&currencyCode=INR');
     Map<String, String> headers = {'Authorization': 'Bearer $savedAccessToken'};
     Response response;
     try {

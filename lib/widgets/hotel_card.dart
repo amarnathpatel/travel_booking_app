@@ -26,7 +26,7 @@ class HotelCardWidget extends StatelessWidget {
                   bottomLeft: Radius.circular(20.0),
                 ),
                 child: Image.asset(
-                  'assets/images/hotel3.jpg',
+                  hotel.hotelPhotoUrl,
                   fit: BoxFit.cover,
                 ),
               ),
