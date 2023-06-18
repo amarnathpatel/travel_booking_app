@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:travel_booking_app/screens/my_trips_screen.dart';
 import 'package:travel_booking_app/utils/strings.dart';
 import '../screens/flight_search_screen.dart';
 import '../screens/hotel_search_screen.dart';
 import '../screens/user_profile_screen.dart';
-import '../screens/my_trips_screen.dart';
 import '../utils/colors.dart';
 
 class TravelAppBottomNavLayout extends StatefulWidget {

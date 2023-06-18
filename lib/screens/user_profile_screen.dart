@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
+import '../widgets/seat_preference_widger.dart';
 
 class UserProfileScreen extends StatefulWidget {
   const UserProfileScreen({super.key});
@@ -23,110 +24,114 @@ class _UserProfileScreen extends State<UserProfileScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      color: Colors.white,
-      child: ListView(
-        children: <Widget>[
-          Column(
-            children: <Widget>[
-              Container(
-                height: 250.0,
-                color: Colors.white,
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                        padding: const EdgeInsets.only(left: 20.0, top: 20.0),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(left: 25.0),
-                              child: Text('User Profile',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20.0,
-                                      color: Colors.black)),
-                            )
-                          ],
-                        )),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
-                      child: Stack(fit: StackFit.loose, children: <Widget>[
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                                width: 140.0,
-                                height: 140.0,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                    image:
-                                        ExactAssetImage('assets/images/user.png'),
-                                    fit: BoxFit.cover,
-                                  ),
-                                )),
-                          ],
-                        ),
-                        Padding(
-                            padding:
-                                const EdgeInsets.only(top: 90.0, right: 100.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                CircleAvatar(
-                                  backgroundColor: kEditProfileCircleBgColor,
-                                  radius: 25.0,
-                                  child: Icon(
-                                    Icons.camera_alt,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              ],
-                            )),
-                      ]),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                color: const Color(0xffFFFFFF),
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 25.0),
+      body: Container(
+        color: Colors.white,
+        child: ListView(
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                Container(
+                  height: 250.0,
+                  color: Colors.white,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Padding(
-                          padding: const EdgeInsets.only(
-                              left: 25.0, right: 25.0, top: 25.0),
+                          padding: const EdgeInsets.only(left: 20.0, top: 20.0),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            mainAxisSize: MainAxisSize.max,
-                            children: <Widget>[
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: const <Widget>[
-                                  Text(
-                                    'Parsonal Information',
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(left: 25.0),
+                                child: Text('User Profile',
                                     style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  _status ? _getEditIcon() : Container(),
-                                ],
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20.0,
+                                        color: Colors.black)),
                               )
                             ],
                           )),
                       Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: Stack(
+                          fit: StackFit.loose,
+                          children: <Widget>[
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                    width: 140.0,
+                                    height: 140.0,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: ExactAssetImage(
+                                            'assets/images/user.png'),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )),
+                              ],
+                            ),
+                            Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 90.0, right: 100.0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const <Widget>[
+                                    CircleAvatar(
+                                      backgroundColor:
+                                          kEditProfileCircleBgColor,
+                                      radius: 25.0,
+                                      child: Icon(
+                                        Icons.camera_alt,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                )),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  color: const Color(0xffFFFFFF),
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 25.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                            padding: const EdgeInsets.only(
+                                left: 25.0, right: 25.0, top: 25.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.max,
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: const <Widget>[
+                                    Text(
+                                      'Parsonal Information',
+                                      style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    _status ? _getEditIcon() : Container(),
+                                  ],
+                                )
+                              ],
+                            )),
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 25.0),
                           child: Row(
@@ -143,8 +148,9 @@ class _UserProfileScreen extends State<UserProfileScreen>
                                 ],
                               ),
                             ],
-                          )),
-                      Padding(
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 2.0),
                           child: Row(
@@ -153,16 +159,16 @@ class _UserProfileScreen extends State<UserProfileScreen>
                               Flexible(
                                 child: TextField(
                                   decoration: const InputDecoration(
-                                    hintText: "Enter Your Name",
-                                    hintStyle: kEditInoputHintTxtStype
-                                  ),
+                                      hintText: "Enter Your Name",
+                                      hintStyle: kEditInoputHintTxtStype),
                                   enabled: !_status,
                                   autofocus: !_status,
                                 ),
                               ),
                             ],
-                          )),
-                      Padding(
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 25.0),
                           child: Row(
@@ -179,8 +185,9 @@ class _UserProfileScreen extends State<UserProfileScreen>
                                 ],
                               ),
                             ],
-                          )),
-                      Padding(
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 2.0),
                           child: Row(
@@ -195,8 +202,9 @@ class _UserProfileScreen extends State<UserProfileScreen>
                                 ),
                               ),
                             ],
-                          )),
-                      Padding(
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 25.0),
                           child: Row(
@@ -213,8 +221,9 @@ class _UserProfileScreen extends State<UserProfileScreen>
                                 ],
                               ),
                             ],
-                          )),
-                      Padding(
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 2.0),
                           child: Row(
@@ -229,8 +238,9 @@ class _UserProfileScreen extends State<UserProfileScreen>
                                 ),
                               ),
                             ],
-                          )),
-                      Padding(
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 25.0),
                           child: Row(
@@ -252,8 +262,9 @@ class _UserProfileScreen extends State<UserProfileScreen>
                                 ),
                               ),
                             ],
-                          )),
-                      Padding(
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 2.0),
                           child: Row(
@@ -267,8 +278,7 @@ class _UserProfileScreen extends State<UserProfileScreen>
                                   child: TextField(
                                     decoration: const InputDecoration(
                                         hintText: "Enter Pin Code",
-                                        hintStyle: kEditInoputHintTxtStype
-                                        ),
+                                        hintStyle: kEditInoputHintTxtStype),
                                     enabled: !_status,
                                   ),
                                 ),
@@ -278,23 +288,54 @@ class _UserProfileScreen extends State<UserProfileScreen>
                                 child: TextField(
                                   decoration: const InputDecoration(
                                       hintText: "Enter State",
-                                      hintStyle: kEditInoputHintTxtStype
-                                      ),
+                                      hintStyle: kEditInoputHintTxtStype),
                                   enabled: !_status,
                                 ),
                               ),
                             ],
-                          )),
-                      !_status ? _getActionButtons() : Container(),
-                    ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 25.0, right: 25.0, top: 25.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: <Widget>[
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.min,
+                                children: const <Widget>[
+                                  Text(
+                                    'Seat Preference',
+                                    style: kUserInputFormEditTextLabelStyle,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.only(
+                                left: 25.0, right: 25.0, top: 2.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: const <Widget>[
+                                Flexible(
+                                  child: SeatPreferenceWidget(),
+                                ),
+                              ],
+                            )),
+                        !_status ? _getActionButtons() : Container(),
+                      ],
+                    ),
                   ),
-                ),
-              )
-            ],
-          ),
-        ],
+                )
+              ],
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 
   @override
@@ -318,7 +359,8 @@ class _UserProfileScreen extends State<UserProfileScreen>
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: kSearchBtnBgColor, // Button Background color
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0, vertical: 15.0),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
                 ),
@@ -339,7 +381,8 @@ class _UserProfileScreen extends State<UserProfileScreen>
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: kSearchBtnBgColor, // Button Background color
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0, vertical: 15.0),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
                 ),
@@ -370,9 +413,11 @@ class _UserProfileScreen extends State<UserProfileScreen>
         ),
       ),
       onTap: () {
-        setState(() {
-          _status = false;
-        });
+        setState(
+          () {
+            _status = false;
+          },
+        );
       },
     );
   }

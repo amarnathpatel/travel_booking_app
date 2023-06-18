@@ -5,12 +5,13 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:intl/intl.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:travel_booking_app/models/flight_details_model.dart';
 import 'package:travel_booking_app/utils/api_constants.dart';
 
-import 'generate_access_token_service.dart';
-
 class FlightsSearchService {
+   final Future<SharedPreferences> _sharedPref = SharedPreferences.getInstance();
+
   Future<List<FlightDetailModel>> getFlightSerachResults(
       String originLocationCode,
       String destinationLocationCode,
@@ -19,20 +20,13 @@ class FlightsSearchService {
       {maxResults,
       nonStop,
       currencyCode}) async {
-    String? token;
-    String? accessToken;
-    try {
-      accessToken = token == null
-          ? await AccessToken().generateAccessToken()
-          : token.toString();
-    } on Exception catch (e) {
-      debugPrint("Error $e occurred in getting access token");
-      throw Exception('Server error occured, please try later');
-    }
+
+    final SharedPreferences prefs = await _sharedPref;
+    String? savedAccessToken = prefs.getString('access_token');
     var flightSerachResult = <FlightDetailModel>[];
     var url = Uri.parse(
         '$kSearchFlightsUrl?originLocationCode=$originLocationCode&destinationLocationCode=$destinationLocationCode&departureDate=$departureDate&adults=$adultsCount');
-    Map<String, String> headers = {'Authorization': 'Bearer $accessToken'};
+    Map<String, String> headers = {'Authorization': 'Bearer $savedAccessToken'};
     Response response;
     try {
       response = await http.get(url, headers: headers);

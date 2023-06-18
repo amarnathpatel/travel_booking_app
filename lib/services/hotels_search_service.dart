@@ -5,28 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:travel_booking_app/models/hotel_details_model.dart';
 import 'package:travel_booking_app/utils/api_constants.dart';
-
-import 'generate_access_token_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HotelSearchService {
   late List<HotelDetailsModel> hotelSearchResult = [];
-  // To fetch Hotel Ids by City code
+  final Future<SharedPreferences> _sharedPref = SharedPreferences.getInstance();
+  
+  // To fetch Hotel Ids by City code API call
   Future<List<String>> getHotelIds(String cityCode) async {
-    String? token; 
-    String? accessToken;
-    try {
-      accessToken = token == null
-          ? await AccessToken().generateAccessToken()
-          : token.toString();
-    } on Exception catch (e) {
-      debugPrint("Error $e occurred in getting access token");
-      throw Exception('Server error occured, please try later');
-    }
+    final SharedPreferences prefs = await _sharedPref;
+    String? savedAccessToken = prefs.getString('access_token');
     Response response;
     var hotelIdList = <String>[];
     var serchByCityUrl = Uri.parse(
         '$kSearchHotelsByCityUrl?cityCode=$cityCode&radius=5&radiusUnit=KM&hotelSource=ALL');
-    Map<String, String> headers = {'Authorization': 'Bearer $accessToken'};
+    Map<String, String> headers = {'Authorization': 'Bearer $savedAccessToken'};
     try {
       response = await http.get(serchByCityUrl, headers: headers);
     } on Exception catch (e) {
@@ -52,7 +45,7 @@ class HotelSearchService {
     return hotelIdList;
   }
 
-  // Search hotels
+  // Search hotels API call
   Future<List<HotelDetailsModel>> searchHotels(
     List<String> hotelIds,
     String checkinDate,
@@ -60,20 +53,11 @@ class HotelSearchService {
     int adultsCount,
     int roomQuantity,
   ) async {
-    String? token; //'liClA30YNOEGWOLJLsQvaKzNE5Op';
-    String? accessToken;
-    try {
-      accessToken = token == null
-          ? await AccessToken().generateAccessToken()
-          : token.toString();
-    } on Exception catch (e) {
-      debugPrint("Error $e occurred in getting access token");
-      throw Exception('Server error occured, please try later');
-    }
-
+    final SharedPreferences prefs = await _sharedPref;
+    String? savedAccessToken = prefs.getString('access_token');
     var searchHotels = Uri.parse(
         '$kSearchHotelsUrl?hotelIds=$hotelIds&adults=$adultsCount&checkInDate=$checkinDate&checkOutDate=$checkoutDate&roomQuantity=$roomQuantity');
-    Map<String, String> headers = {'Authorization': 'Bearer $accessToken'};
+    Map<String, String> headers = {'Authorization': 'Bearer $savedAccessToken'};
     Response response;
     try {
       response = await http.get(searchHotels, headers: headers);

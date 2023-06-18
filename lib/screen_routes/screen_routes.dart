@@ -4,8 +4,8 @@ import '../navigation/travel_app_bottom_nav.dart';
 import '../screens/flight_results_list_screen.dart';
 import '../screens/flight_search_screen.dart';
 import '../screens/hotel_search_screen.dart';
-import '../screens/user_profile_screen.dart';
 import '../screens/my_trips_screen.dart';
+import '../screens/user_profile_screen.dart';
 
 class Routes {
   static const String routeHomeScreen = TravelAppBottomNavLayout.routeName;

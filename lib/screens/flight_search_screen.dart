@@ -201,7 +201,7 @@ class _FlightSearchScreenState extends State<FlightSearchScreen> {
             noOfPassengers);
       } catch (e) {
         debugPrint(
-            'Exception occured in getti ng flight results -  message : $e');
+            'Exception occured in getting flight results -  message : $e');
         setState(() {
           _isBusy = false;
         });
