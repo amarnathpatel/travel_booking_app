@@ -1,27 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'navigation/travel_app_bottom_nav.dart';
-
-// void main() {
-//   runApp(const TravelBookingApp());
-// }
-
-// class TravelBookingApp extends StatelessWidget {
-//   const TravelBookingApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return  MaterialApp(
-//       title: 'Travel Booking Application',
-//       debugShowCheckedModeBanner: false,
-//       theme: ThemeData(
-//         primarySwatch: Colors.red,
-//         visualDensity: VisualDensity.adaptivePlatformDensity,
-//       ),
-//       home: const TravelAppBottomNavLayout(),
-//     );
-//   }
-// }
-
 //  Navigation using named routes
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -47,12 +23,8 @@ Future<void> main() async {
 Future<void> getAndSaveAccessToken() async {
    final Future<SharedPreferences> sharedPref = SharedPreferences.getInstance();
    final SharedPreferences prefs = await sharedPref;
-   //String? savedAccessToken = prefs.getString('access_token');
-   //debugPrint("getAndSaveAccessToken(): - Previous AccessToken : $savedAccessToken");
-    try {
-      //String? accessToken = savedAccessToken ?? await AccessToken().generateAccessToken();
+     try {
       String? accessToken = await AccessToken().generateAccessToken();
-      //debugPrint("getAndSaveAccessToken() - Access token : $accessToken");
       prefs.setString('access_token',accessToken!).then((value) => debugPrint("getAndSaveAccessToken() - Access token generated abd saved : $value"));
     } on Exception catch (e) {
       debugPrint("getAndSaveAccessToken() - Error $e occurred in getting access token");
@@ -84,19 +56,3 @@ class BootstrapAppWidget extends StatelessWidget {
     );
   }
 }
-
-
-
-// Get access token test
-
-
-// import 'package:flutter/material.dart';
-
-// import 'services/flights_search_service.dart';
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   var service = FlightsSearchService();
-//   await service.getFlightSerachResults('PNQ','LKO', '2023-06-13',3, maxResults: 5, nonStop: 'true',currencyCode: 'INR');
-// }
-
-
